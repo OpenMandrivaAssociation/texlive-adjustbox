@@ -1,3 +1,9 @@
+# revision 23876
+# category Package
+# catalog-ctan /macros/latex/contrib/adjustbox
+# catalog-date 2011-09-05 11:02:41 +0200
+# catalog-license lppl1.3
+# catalog-version 0.6
 Name:		texlive-adjustbox
 Version:	0.6
 Release:	1
@@ -57,6 +63,7 @@ matching environments with the identical names as the macros.
 #- source
 %doc %{_texmfdistdir}/source/latex/adjustbox/adjustbox.dtx
 %doc %{_texmfdistdir}/source/latex/adjustbox/adjustbox.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -67,3 +74,5 @@ matching environments with the identical names as the macros.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
