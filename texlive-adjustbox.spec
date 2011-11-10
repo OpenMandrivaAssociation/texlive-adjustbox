@@ -1,11 +1,11 @@
-# revision 23876
+# revision 24464
 # category Package
 # catalog-ctan /macros/latex/contrib/adjustbox
-# catalog-date 2011-09-05 11:02:41 +0200
+# catalog-date 2011-10-31 11:10:34 +0100
 # catalog-license lppl1.3
-# catalog-version 0.6
+# catalog-version 0.7
 Name:		texlive-adjustbox
-Version:	0.6
+Version:	0.7
 Release:	1
 Summary:	Apply graphics package macros to general boxes
 Group:		Publishing
