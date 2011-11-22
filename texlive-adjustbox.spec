@@ -1,11 +1,11 @@
-# revision 24464
+# revision 24593
 # category Package
 # catalog-ctan /macros/latex/contrib/adjustbox
-# catalog-date 2011-10-31 11:10:34 +0100
+# catalog-date 2011-11-14 19:03:15 +0100
 # catalog-license lppl1.3
-# catalog-version 0.7
+# catalog-version 0.8
 Name:		texlive-adjustbox
-Version:	0.7
+Version:	0.8
 Release:	1
 Summary:	Apply graphics package macros to general boxes
 Group:		Publishing
@@ -56,9 +56,12 @@ matching environments with the identical names as the macros.
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/tex/latex/adjustbox/adjcalc.sty
+%{_texmfdistdir}/tex/latex/adjustbox/adjdvips.def
 %{_texmfdistdir}/tex/latex/adjustbox/adjgrfx.sty
+%{_texmfdistdir}/tex/latex/adjustbox/adjpdftex.def
 %{_texmfdistdir}/tex/latex/adjustbox/adjpgf.def
 %{_texmfdistdir}/tex/latex/adjustbox/adjustbox.sty
+%{_texmfdistdir}/tex/latex/adjustbox/adjxetex.def
 %doc %{_texmfdistdir}/doc/latex/adjustbox/README
 %doc %{_texmfdistdir}/doc/latex/adjustbox/adjustbox.pdf
 #- source
