@@ -6,7 +6,7 @@
 # catalog-version 0.8
 Name:		texlive-adjustbox
 Version:	0.8
-Release:	1
+Release:	2
 Summary:	Apply graphics package macros to general boxes
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/adjustbox
