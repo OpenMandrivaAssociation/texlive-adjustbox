@@ -1,13 +1,7 @@
-# revision 26555
-# category Package
-# catalog-ctan undef
-# catalog-date undef
-# catalog-license undef
-# catalog-version undef
 Name:		texlive-adjustbox
 Epoch:		1
-Version:	20131013
-Release:	9
+Version:	1.0
+Release:	1
 Summary:	TeXLive adjustbox package
 Group:		Publishing
 URL:		http://tug.org/texlive
@@ -33,22 +27,10 @@ TeXLive adjustbox package.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/adjustbox/adjcalc.sty
-%{_texmfdistdir}/tex/latex/adjustbox/adjustbox.sty
-%{_texmfdistdir}/tex/latex/adjustbox/tc-dvips.def
-%{_texmfdistdir}/tex/latex/adjustbox/tc-pdftex.def
-%{_texmfdistdir}/tex/latex/adjustbox/tc-pgf.def
-%{_texmfdistdir}/tex/latex/adjustbox/tc-xetex.def
-%{_texmfdistdir}/tex/latex/adjustbox/trimclip.sty
-%doc %{_texmfdistdir}/doc/latex/adjustbox/README
-%doc %{_texmfdistdir}/doc/latex/adjustbox/adjcalc.pdf
-%doc %{_texmfdistdir}/doc/latex/adjustbox/adjustbox.pdf
-%doc %{_texmfdistdir}/doc/latex/adjustbox/trimclip.pdf
+%{_texmfdistdir}/tex/latex/adjustbox
+%doc %{_texmfdistdir}/doc/latex/adjustbox
 #- source
-%doc %{_texmfdistdir}/source/latex/adjustbox/adjcalc.dtx
-%doc %{_texmfdistdir}/source/latex/adjustbox/adjustbox.dtx
-%doc %{_texmfdistdir}/source/latex/adjustbox/adjustbox.ins
-%doc %{_texmfdistdir}/source/latex/adjustbox/trimclip.dtx
+%doc %{_texmfdistdir}/source/latex/adjustbox
 
 #-----------------------------------------------------------------------
 %prep
