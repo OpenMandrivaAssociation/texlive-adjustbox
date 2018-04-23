@@ -1,6 +1,6 @@
 Name:		texlive-adjustbox
 Epoch:		1
-Version:	1.0
+Version:	1.1
 Release:	1
 Summary:	TeXLive adjustbox package
 Group:		Publishing
