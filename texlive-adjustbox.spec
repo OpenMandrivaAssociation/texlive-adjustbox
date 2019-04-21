@@ -1,7 +1,7 @@
 Name:		texlive-adjustbox
 Epoch:		1
-Version:	1.1
-Release:	3
+Version:	1.2
+Release:	1
 Summary:	TeXLive adjustbox package
 Group:		Publishing
 URL:		http://tug.org/texlive
