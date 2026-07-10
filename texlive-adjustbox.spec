@@ -1,44 +1,37 @@
-Name:		texlive-adjustbox
+%global tl_name adjustbox
+%global tl_revision 78101
+
+Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	74309
-Release:	1
-Summary:	TeXLive adjustbox package
+Version:	1.3c
+Release:	%{tl_revision}.1
+Summary:	Graphics package-alike macros for general boxes
 Group:		Publishing
-URL:		https://tug.org/texlive
-License:	http://www.tug.org/texlive/LICENSE.TL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjustbox.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjustbox.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/adjustbox.source.r%{version}.tar.xz
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/adjustbox
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/adjustbox.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/adjustbox.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/adjustbox.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Requires:	texlive(collectbox)
+Requires:	texlive(graphics)
+Requires:	texlive(xkeyval)
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-TeXLive adjustbox package.
+The package provides several macros to adjust boxed content. One purpose
+is to supplement the standard graphics package, which defines the macros
+\resizebox, \scalebox and \rotatebox , with the macros\trimbox and
+\clipbox. The main feature is the general \adjustbox macro which extends
+the "key=value" interface of \includegraphics from the graphics package
+and applies it to general text content. Additional provided box macros
+are \lapbox, \marginbox, \minsizebox, \maxsizebox and \phantombox. All
+macros use the collectbox package to read the content as a box and not
+as a macro argument. This allows for all forms of content including
+special material like verbatim content. A special feature of collectbox
+is used to provide matching environments with the identical names as the
+macros.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/adjustbox
-%doc %{_texmfdistdir}/doc/latex/adjustbox
-#- source
-%doc %{_texmfdistdir}/source/latex/adjustbox
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
